@@ -13,7 +13,7 @@ void exit();
 void main()  
 {  
 clrscr();  
-it opr;  
+int opr;  
 // display different operation of the calculator  
 do  
 {  
@@ -85,7 +85,7 @@ cout <<"\n Subtraction of the number = " << z;
 }  
 void multi()  
 {  
-float num2, mul;  
+int num1, num2, mul;  
 cout <<" \n Enter the First number = ";  
 cin >> num1;  
 cout << "\n Enter the Second number = ";  
@@ -98,16 +98,16 @@ void division()
 int num1, num2, div = 0;  
 cout <<" \n Enter the First number = ";  
 cin >> num1;  
-cout << "n Enter the Second number = " 
+cout << "\n Enter the Second number = ";  
 cin >> num2;  
 while ( num2 == 0)  
      {  
      cout << "\n Divisor canot be zero"  
-         "\n Please enter the divisor once again: "
+         "\n Please enter the divisor once again: ";  
          cin >> num2;  
          }  
-div = num1 * num2;  
-cout <<"\n Division of two numbers = " << div
+div = num1 / num2;  
+cout <<"\n Division of two numbers = " << div;  
 }  
 void sqr()  
 {  
@@ -115,7 +115,7 @@ int num1;
 float sq;  
 cout <<" \n Enter a number to find the Square: ";  
 cin >> num1;  
-sq = num1  num1;  
+sq = num1 * num1;  
 cout <<" \n Square of " << num1<< " is : "<< sq;  
 }  
 void srt()  
