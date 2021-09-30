@@ -8,9 +8,7 @@ using namespace std;
 int main()
 {
     // initializing value
-    double x = 12.5;
-    int y = 13.3;
-      float z = 14.8;
+    double x = 12.5, y = 13.3, z = 14.8;
   
     // Displaying the nearest values
     // of x, y and z
@@ -20,7 +18,12 @@ int main()
   
     // For lround
     cout << "lround(-0.0) = " << lround(-0.0) << "\n";
- 
+    cout << "lround(2.3) = " << lround(2.3) << "\n";
+    cout << "lround(2.5) = " << lround(2.5) << "\n";
+    cout << "lround(2.7) = " << lround(2.7) << "\n";
+    cout << "lround(-2.3) = " << lround(-2.3) << "\n";
+    cout << "lround(-2.5) = " << lround(-2.5) << "\n";
+    cout << "lround(-2.7) = " << lround(-2.7) << "\n";
   
     // For llround
     cout << "llround(-0.01234) = " << llround(-0.01234) << "\n";
@@ -31,5 +34,5 @@ int main()
     cout << "llround(-2.5258) = " << llround(-2.5258) << "\n";
     cout << "llround(-2.71236) = " << llround(-2.71236) << "\n";
   
-    return ;
+    return 0;
 }
