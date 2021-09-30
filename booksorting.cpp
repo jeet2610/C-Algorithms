@@ -1,4 +1,4 @@
-#include <iostream.h>
+#include <iostream>
 using namespace std;
 #include <cstring>
 
@@ -6,8 +6,8 @@ using namespace std;
 struct Book
 {
 	char name[100];
-	string author[100];
-	int price;
+	char author[100];
+	float price;
 };
 
 
@@ -39,7 +39,7 @@ void SortBookPrice( Book books[], int num )
 			if( books[i].price > books[j].price )
 			{
 				Book temp = books[i];
-				books[ii] = books[j];
+				books[i] = books[j];
 				books[j] = temp;
 			}
 		}
@@ -67,19 +67,19 @@ void SortBookTitle( Book books[], int num )
 void OutputBooks( Book books[], int num )
 {
 	cout << endl;
-	for(int i=0i<=num;i++){
+	for(int i=0;i<num;i++)
 	{
 		cout << "Book Information: " << endl;
 		cout << "Name: " << books[i].name << endl;
 		cout << "Author: " << books[i].author << endl;
 		cout << "Price: " << books[i].price << endl;
-		cout << endl
+		cout << endl;
 	}
 }
 
 
 
-float NUMBER = 5;
+const int NUMBER = 5;
 int main()
 {
 	Book books[NUMBER];
