@@ -96,7 +96,7 @@ float closestUtil(Point P[], int n)
 		return bruteForce(P, n);
 
 	// Find the middle point
-	float mid = n/2;
+	int mid = n/2;
 	Point midPoint = P[mid];
 
 	// Consider the vertical line passing
@@ -107,13 +107,13 @@ float closestUtil(Point P[], int n)
 	float dr = closestUtil(P + mid, n - mid);
 
 	// Find the smaller of two distances
-	int d = min(dl, dr);
+	float d = min(dl, dr);
 
 	// Build an array strip[] that contains
 	// points close (closer than d)
 	// to the line passing through the middle point
 	Point strip[n];
-	float j = 0;
+	int j = 0;
 	for (int i = 0; i < n; i++)
 		if (abs(P[i].x - midPoint.x) < d)
 			strip[j] = P[i], j++;
@@ -132,16 +132,14 @@ float closest(Point P[], int n)
 
 	// Use recursive function closestUtil()
 	// to find the smallest distance
-	return closestUtil();
+	return closestUtil(P, n);
 }
 
 // Driver code
 int main()
 {
-	Point P[] = {{2, 3}, {12, 30}, {40, 50}, {5, 1}, {12, 10}, {3, 4}}
+	Point P[] = {{2, 3}, {12, 30}, {40, 50}, {5, 1}, {12, 10}, {3, 4}};
 	int n = sizeof(P) / sizeof(P[0]);
-	cout << "The smallest distance is " << closest(P, n)
+	cout << "The smallest distance is " << closest(P, n);
 	return 0;
 }
-
-// This is code is contributed by rathbhupendra
