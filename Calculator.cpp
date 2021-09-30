@@ -20,12 +20,7 @@ do
 cout << "Select any operation from the C++ Calculator"  
      "\n1 = Addition"  
      "\n2 = Subtraction"  
-     "\n3 = Multiplication"  
-     "\n4 = Division"  
-     "\n5 = Square"  
-     "\n6 = Square Root"  
-     "\n7 = Exit"  
-     "\n \n Make a choice: ";  
+     "\n3 = Multiplication";  
      cin >> opr;  
   
    switch (opr)  
